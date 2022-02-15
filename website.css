@@ -1,0 +1,276 @@
+/* Backbone of the style of the website */
+:root {
+  --gold: gold;
+  --black-text: black;
+  --dark-gold: rgb(19, 16, 0);
+  --white-text: white;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  background-color: var(--dark-gold);
+  color: var(--white-text);
+  padding: 2rem;
+}
+
+h1 {
+  margin: 1rem 2rem;
+  font-size: 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white-text);
+  padding: 2rem;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex: 1 0 50%;
+}
+
+.pog {
+  flex: 1 0 25%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border-right: 2.5px solid var(--dark-gold);
+}
+
+.pog h2 {
+  text-align: right;
+  margin: 0 5rem;
+  font-size: 2rem;
+}
+
+.portfolio-section,
+.about-me-section,
+.contact-me-section {
+  flex: 1 0 75%;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-me-section {
+  display: flex;
+}
+
+.contact-me {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* The meat and potatoes of the website */
+.portfolio-content {
+  align-self: center;
+  margin: 2.5rem;
+  font-size: 1.6rem;
+  margin-left: 5rem;
+}
+
+.portfolio-description {
+  font-size: 1.2rem;
+}
+
+.portfolio-pic a img {
+  box-shadow: 2px -1px 10px gray;
+  border-radius: 5%;
+}
+
+.about-me-section p {
+  font-size: 1.5rem;
+  max-width: 100rem;
+  margin: 2.5rem;
+  text-align: justify;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.about-me-pic {
+  float: left;
+  max-width: 15%;
+  height: auto;
+  margin-right: 2rem;
+  border-radius: 100%;
+  box-shadow: 2px -1px 10px gray;
+}
+
+.contact-me-content {
+  align-self: center;
+  font-size: 1.6rem;
+  margin: 3rem;
+} 
+
+.contact-me-content a,
+.portfolio-content a {
+  text-decoration: none;
+  color: var(--black-text);
+}
+
+footer {
+  margin: 3rem;
+}
+.footer-section {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* The cool effects of the website*/
+@media screen and (min-width: 993px) {
+  a:hover {
+    text-decoration: underline;
+    transform: scale(1.1, 1.1);
+  }
+
+  .pogtent-1 {
+    animation: floatInFromLeft 2s;
+  }
+
+  .pogtent-2 {
+    animation: floatInFromLeft 2s;
+  }
+
+  .pogtent-3 {
+    animation: floatInFromLeft 2s;
+  }
+
+  .pogtent-4 {
+    animation: zoom-in-zoom-out 1s ease-in 3s;
+  }
+
+  .pogtent-5 {
+    animation: zoom-in-zoom-out 1s ease-in 4s;
+  }
+
+  .pogtent-6 {
+    animation: zoom-in-zoom-out 1s ease-in 5s;
+  }
+
+  .pogtent-7 {
+    animation: zoom-in-zoom-out 1s ease-in 6s;
+  }
+
+  .pogtent-8 {
+    animation: zoom-in-zoom-out 1s ease-in 7s;
+  }
+
+  .pogtent-9 {
+    animation: zoom-in-zoom-out 1s ease-in 8s;
+  }
+
+  .pogtent-10 {
+    animation: zoom-in-zoom-out 1s ease-in 9s;
+  }
+
+  @keyframes floatInFromLeft {
+    0% {
+      transform: translateX(-50rem);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+/* For tablet screen styles */
+@media screen and (max-width: 1100px) {
+  h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    padding: 0.7rem;
+    font-size: 1.25rem;
+    align-self: center;
+  }
+
+  .about-me-section p {
+    margin: 2rem 5rem;
+  }
+}
+
+/* For mobile phone layout */
+@media screen and (max-width: 766px) {
+  header,
+  nav,
+  main,
+  .content {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  nav a {
+    align-self: center;
+    padding: 0.5rem;
+    font-size: 2rem;
+    margin: 1rem;
+    border-radius: 2%;
+  }
+
+  .pog {
+    margin: 1rem 3rem;
+    border-right: 0px;
+    border-bottom: 2.5px solid var(--dark-gold);
+  }
+
+  .pog h2 {
+    margin: 1rem 2rem;
+    text-align: left;
+  }
+
+  .portfolio-content {
+    flex-basis: 100%;
+  }
+
+  .portfolio-pic a img {
+    width: 60%;
+    height: auto;
+  }
+
+  .contact-me-content {
+    margin: 2rem auto;
+  }
+}
